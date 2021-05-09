@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TimeTeller.Views.TimerPage"
+             BackgroundColor="{DynamicResource Background}"
+             Title="Timer">
+
+    <Grid RowDefinitions="Auto,*">
+        <!-- Layout children vertically -->
+        <StackLayout Grid.Row="1"
+                     Spacing="20">
+            <Label Text="{Binding Name}"
+                FontSize="45"
+               HorizontalOptions="CenterAndExpand"
+               VerticalOptions="CenterAndExpand"
+               TextColor="{DynamicResource PrimaryTextColor}" />
+
+            <Label x:Name="lblTimer"  FontSize="45"
+               HorizontalOptions="CenterAndExpand"
+               VerticalOptions="CenterAndExpand"
+               TextColor="{DynamicResource PrimaryTextColor}">
+
+            </Label>
+            <Button Text="Start"
+                    Clicked="OnStartButtonClicked" />
+            <Button Text="Stop"
+                    Clicked="OnStopButtonClicked" />
+            <Button Text="Reset"
+                    Clicked="OnResetButtonClicked" />
+            <Button Text="Save"
+                    Clicked="OnSaveButtonClicked" />
+        </StackLayout>
+    </Grid>
+
+</ContentPage>
